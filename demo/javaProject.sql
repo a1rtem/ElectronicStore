@@ -1,79 +1,170 @@
-drop table GAME cascade CONSTRAINTS;
-drop table BOARD_GAME cascade CONSTRAINTS;
-drop table VIDEO_GAME_DISK cascade CONSTRAINTS;
-drop table VIDEO_GAME_DIGITAL cascade CONSTRAINTS;
-drop table COUPON cascade CONSTRAINTS;
-drop table CONSOLE cascade CONSTRAINTS;
-drop table COMPUTER cascade CONSTRAINTS;
+DROP TABLE GAME CASCADE CONSTRAINTS;
 
+DROP TABLE BOARD_GAME CASCADE CONSTRAINTS;
+
+DROP TABLE VIDEO_GAME_DISK CASCADE CONSTRAINTS;
+
+DROP TABLE VIDEO_GAME_DIGITAL CASCADE CONSTRAINTS;
+
+DROP TABLE COUPON CASCADE CONSTRAINTS;
+
+DROP TABLE CONSOLE CASCADE CONSTRAINTS;
+
+DROP TABLE COMPUTER CASCADE CONSTRAINTS;
 
 CREATE TABLE GAME (
-    gameID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    title varchar2(20),
-    price number(7,2),
-    rating VARCHAR2(4)
+    GAMETYPE VARCHAR2(10),
+    GAMEID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    TITLE VARCHAR2(20),
+    PRICE NUMBER(7, 2),
+    RATING VARCHAR2(4)
 );
 
 CREATE TABLE BOARD_GAME(
-
-    boardGameID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    title varchar2(20),
-    price number(5,2),
-    rating VARCHAR2(4),
-    pieces number (6,0)
+    BOARDGAMETYPE VARCHAR2(10),
+    BOARDGAMEID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    TITLE VARCHAR2(20),
+    PRICE NUMBER(5, 2),
+    RATING VARCHAR2(4),
+    PIECES NUMBER (6, 0)
 );
 
 CREATE TABLE VIDEO_GAME_DISK(
-    gameDiskID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    title varchar2(20),
-    price number(5,2),
-    rating VARCHAR2(4),
-    platform varchar2(20),
-    publisher varchar2(20)
+    GAMEDISKTYPE VARCHAR2(10),
+    GAMEDISKID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    TITLE VARCHAR2(20),
+    PRICE NUMBER(5, 2),
+    RATING VARCHAR2(4),
+    PLATFORM VARCHAR2(20),
+    PUBLISHER VARCHAR2(20)
 );
+
 CREATE TABLE VIDEO_GAME_DIGITAL(
-    digitalGameID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    title varchar2(20),
-    price number(5,2),
-    rating VARCHAR2(4),
-    platform varchar2(20),
-    game_size number(6,3)
+    DIGITALGAMETYPE VARCHAR2(10),
+    DIGITALGAMEID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    TITLE VARCHAR2(20),
+    PRICE NUMBER(5, 2),
+    RATING VARCHAR2(4),
+    PLATFORM VARCHAR2(20),
+    GAME_SIZE NUMBER(6, 3)
 );
 
 CREATE TABLE COUPON (
-    couponType VARCHAR2(10);
-    couponID  NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    product VARCHAR2(20),
-    amount number(4,2),
-    type varchar2(20)
+    COUPONTYPE VARCHAR2(10),
+    COUPONID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    PRODUCT VARCHAR2(20),
+    AMOUNT NUMBER(4, 2),
+    TYPE VARCHAR2(20)
 );
 
 CREATE TABLE CONSOLE(
-    consoleType VARCHAR2(10);
-    consoleID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    deviceName varchar2(20),
-    price number(5,2)
+    CONSOLETYPE VARCHAR2(10),
+    CONSOLEID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    DEVICENAME VARCHAR2(20),
+    PRICE NUMBER(5, 2)
 );
 
 CREATE TABLE COMPUTER(
-    computerType VARCHAR2(10);
-    computerID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    deviceName varchar2(20),
-    storage number(8,2),
-    RAM number (4,0),
-    price number(7,2)
+    COMPUTERTYPE VARCHAR2(10),
+    COMPUTERID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    DEVICENAME VARCHAR2(20),
+    STORAGE NUMBER(8, 2),
+    RAM NUMBER (4, 0),
+    PRICE NUMBER(7, 2)
 );
 
-INSERT INTO GAME(title, price, rating) VALUES('UNO', 13.99, '6+');
-INSERT INTO BOARD_GAME(title, price, rating, pieces) VALUES('board', 'Chess', 33.85, '8+', 32);
-INSERT INTO VIDEO_GAME_DISK(title, price, rating, platform, publisher) VALUES('disk', 'God of War', 63.85, '16+', 'PS5', 'PEOPLE');
-INSERT INTO VIDEO_GAME_DIGITAL(title, price, rating, platform, game_size) VALUES('digital', 'Terraria', 23.85, '10+', 'PC', 3.5);
+-- TODO
+INSERT INTO GAME(
+    TITLE,
+    PRICE,
+    RATING
+) VALUES(
+    'UNO',
+    13.99,
+    '6+'
+);
 
-INSERT INTO computer(deviceName, storage, RAM, price) VALUES('pc','ASUS Desktop-01', 1.8, 16, 999.99);
-INSERT INTO console(deviceName, price) VALUES('console', 'Nintendo Switch', 700);
-INSERT INTO console(deviceName, price) VALUES('console', 'Playstation 5', 900);
+INSERT INTO BOARD_GAME(
+    TITLE,
+    PRICE,
+    RATING,
+    PIECES
+) VALUES(
+    'board',
+    'Chess',
+    33.85,
+    '8+',
+    32
+);
 
+INSERT INTO VIDEO_GAME_DISK(
+    TITLE,
+    PRICE,
+    RATING,
+    PLATFORM,
+    PUBLISHER
+) VALUES(
+    'disk',
+    'God of War',
+    63.85,
+    '16+',
+    'PS5',
+    'PEOPLE'
+);
 
-INSERT INTO COUPON(amount, type) VALUES('discount', 20, 'Discount');
+INSERT INTO VIDEO_GAME_DIGITAL(
+    TITLE,
+    PRICE,
+    RATING,
+    PLATFORM,
+    GAME_SIZE
+) VALUES(
+    'digital',
+    'Terraria',
+    23.85,
+    '10+',
+    'PC',
+    3.5
+);
+
+INSERT INTO COMPUTER(
+    DEVICENAME,
+    STORAGE,
+    RAM,
+    PRICE
+) VALUES(
+    'pc',
+    'ASUS Desktop-01',
+    1.8,
+    16,
+    999.99
+);
+
+INSERT INTO CONSOLE(
+    DEVICENAME,
+    PRICE
+) VALUES(
+    'console',
+    'Nintendo Switch',
+    700
+);
+
+INSERT INTO CONSOLE(
+    DEVICENAME,
+    PRICE
+) VALUES(
+    'console',
+    'Playstation 5',
+    900
+);
+
+INSERT INTO COUPON(
+    AMOUNT,
+    TYPE
+) VALUES(
+    'discount',
+    20,
+    'Discount'
+);
 
 COMMIT;
