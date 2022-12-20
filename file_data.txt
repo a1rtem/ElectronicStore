@@ -1,0 +1,54 @@
+board,10,Chess,Good,28
+board,71.32,Monopoly,Mediocre,56
+board,17,Scrabble,Excellent,123
+board,70.12,Checkers,Good,45
+board,26,Risk,Bad,76
+board,76.99,Go,Bad,23
+board,100,Cluedo,Terrible,43
+board,18.19,Yahtzee,Average,6
+board,29.29,Codenames,Average,1
+board,55.55,Battleship,Bad,5
+disk,60,Grand Theft Auto 3,18+,Console,Rockstar
+disk,129,League Of Legends,4+,Pc,Riot Games
+disk,34,Apex Legends,9+,Console,Respawn
+disk,23,Battlefield 5,3+,Console,EA
+disk,65,Zelda,2+,Pc,Nintendo
+disk,45,Fortnite,3+,Pc,Epic Games
+disk,34,Roblox,4+,Console,Roblox
+disk,2,Civilization 6,5+,Pc,Firaxis Games
+disk,98,Minecraft,8+,PC,Mojang
+disk,872,Call of Duty 4,5+,Console,EA
+digital,19.99,Tetris 3D,6+,Pc,15
+digital,57,God Of War,10+,Console,42
+digital,34.88,PUBG,2+,Pc,12
+digital,76,Pac-Man,6+,Console,54
+digital,123.87,CSGO,7+,Pc,23
+digital,54.56,Dota 2,5+,Pc,32
+digital,34,Among Us,6+,Pc,6
+digital,87.99,The Last of Us,7+,Console,46
+digital,90,Wii Sports,8+,Console,12
+digital,56.54,Overwatch,1+,Pc,23
+pc,999.99,Mac,240.2,32
+pc,1234.56,HP,124,8
+pc,600,Dell,980,16
+pc,567,Razer,128,32
+pc,234.34,Corsair,240,64
+pc,4467.35,Mystery PC,112,2
+pc,234,Low-budget PC,24,3
+pc,1300,Medium-budget PC,420,32
+pc,2799.99,High-budget PC,2240,128
+pc,112.08,Bad PC,12,8
+console,499.99,Xbox One
+console,300,Nintendo Switch
+console,400,PlayStation 4
+console,250,Nintendo 3DS
+console,350,Wii U
+console,399.99,Xbox 360
+console,249.99,PlayStation Vita
+console,199.99,Nintendo 64
+console,110,Game Boy
+console,200,NES
+discount,15,Dell
+credit,20
+gamekey,IBM
+
